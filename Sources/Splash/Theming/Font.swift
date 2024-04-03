@@ -31,6 +31,12 @@ public struct Font {
         resource = .system
         self.size = size
     }
+    
+    /// Initialize with arbitrary font of predefined size
+    public init(font: Loaded) {
+        resource = .preloaded(font)
+        self.size = font.pointSize
+    }
 }
 
 public extension Font {
